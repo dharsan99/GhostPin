@@ -37,6 +37,27 @@ public class MarkerTracker {
     Mat descTempl;
     MatOfDMatch matches;
     Mat image;
+
+    public Mat getTemplate() {
+        return template;
+    }
+
+    public void setTemplate(Mat template) {
+        this.template = template;
+        templGray = new Mat(template.size(), image.type());
+        Imgproc.cvtColor(template, templGray, Imgproc.COLOR_BGRA2GRAY);
+    }
+
+    public Mat getImage() {
+        return image;
+    }
+
+    public void setImage(Mat image) {
+        this.image = image;
+        imgGray = new Mat(image.size(), image.type());
+        Imgproc.cvtColor(image, imgGray, Imgproc.COLOR_BGRA2GRAY);
+    }
+
     Mat template;
 
     public MarkerTracker(Mat image, Mat template){
@@ -101,6 +122,8 @@ public class MarkerTracker {
         Imgproc.findContours(threshold, contours, new Mat(), Imgproc.RETR_CCOMP, Imgproc.CHAIN_APPROX_NONE);
         //HashMap<Integer,MatOfPoint> coordinates = computeCoord(contours,)
 
+        if(contours.size()==0 )
+            return null;
         List<DMatch> matchList = matches.toList();
         List<KeyPoint> keyPointList = keyPointImg.toList();
 
@@ -153,6 +176,8 @@ public class MarkerTracker {
 
     public Mat drawContourOnIdentifiedImg(MatOfPoint contour){
 
+            if(null == contour)
+                return null;
 
         Scalar color = new Scalar(0,255,0);
         List<MatOfPoint> contourList = new ArrayList<MatOfPoint>();

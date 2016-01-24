@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <lint>
-    <issue id="InlinedApi">
+    <issue templName="InlinedApi">
         <ignore path="src\org\opencv\android\JavaCameraView.java" />
     </issue>
-    <issue id="NewApi">
+    <issue templName="NewApi">
         <ignore path="src\org\opencv\android\JavaCameraView.java" />
     </issue>
 </lint>
