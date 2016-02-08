@@ -13,7 +13,7 @@
         <!--android:layout_height="wrap_content"-->
         <!--android:templName="@+templName/textView" />-->
 
-    <opencv.ar.ashwin.opcv.CameraView
+    <opencv.ar.ashwin.ghostpin.CameraView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone"
@@ -28,10 +28,40 @@
         android:text="Make template"
         android:visibility="gone"
         android:id="@+id/captureButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/camera_view"
+        android:layout_alignStart="@+id/camera_view" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START"
+        android:visibility="gone"
+        android:id="@+id/startButton"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:onClick="toggleRunMatching"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:visibility="gone"
+        android:id="@+id/clear_data"
+        android:onClick="clearData"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/templateText"
+        android:textColor="#FFFFFFFF"
+        android:visibility="invisible"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp" />
 
 </RelativeLayout>

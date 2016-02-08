@@ -1,9 +1,11 @@
-package opencv.ar.ashwin.opcv;
+package opencv.ar.ashwin.ghostpin;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import opencv.ar.ashwin.ghostpin.R;
 
 
 public class MarkerCreatorActivity extends ActionBarActivity {

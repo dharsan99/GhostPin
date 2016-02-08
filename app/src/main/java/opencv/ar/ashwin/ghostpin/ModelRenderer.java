@@ -1,4 +1,4 @@
-package opencv.ar.ashwin.opcv;
+package opencv.ar.ashwin.ghostpin;
 
 import android.content.Context;
 import android.util.Log;
@@ -16,6 +16,8 @@ import org.rajawali3d.math.vector.Vector3;
 import org.rajawali3d.renderer.RajawaliRenderer;
 
 import javax.microedition.khronos.opengles.GL10;
+
+import opencv.ar.ashwin.ghostpin.R;
 
 /**
  * Created by ashwin on 15/01/16.

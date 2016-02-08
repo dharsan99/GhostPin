@@ -1,4 +1,4 @@
-package opencv.ar.ashwin.opcv;
+package opencv.ar.ashwin.ghostpin;
 
         import java.io.FileOutputStream;
         import java.util.List;
@@ -60,6 +60,9 @@ public class CameraView extends JavaCameraView implements PictureCallback {
         // Postview and jpeg are sent in the same buffers if the queue is not empty when performing a capture.
         // Clear up buffers to avoid mCamera.takePicture to be stuck because of a memory issue
         mCamera.setPreviewCallback(null);
+
+
+       // mCamera.getParameters().getF
 
         // PictureCallback is implemented by the current class
         mCamera.takePicture(null, null, this);
